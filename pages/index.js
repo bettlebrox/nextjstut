@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Router from 'next/router'
 
 const Home = () => {
-  return null
+  return null;
 }
 
 export default Home;
@@ -14,4 +14,5 @@ export const getServerSideProps = (context) => {
     Router.replace('/[country]',`${country}`):
     context.res.writeHead(302,{ Location: `/${country}`});
   context.res.end();
+  return {props:{}};
 }
